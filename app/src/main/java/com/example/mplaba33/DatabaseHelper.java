@@ -6,7 +6,7 @@ import android.content.Context;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "laba3.db"; // название бд
-    private static final int SCHEMA = 4; // версия базы данных
+    private static final int SCHEMA = 5; // версия базы данных
     static final String TABLE = "classmate"; // название таблицы в бд
     // названия столбцов
     public static final String COLUMN_ID = "_id";
@@ -25,13 +25,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + " TEXT, " + COLUMN_TIME + " TEXT);");
         // добавление начальных данных
         db.execSQL("INSERT INTO "+ TABLE +" (" + COLUMN_NAME
-                + ", " + COLUMN_TIME  + ") VALUES ('Евгений', '19:40');");
+                + ", " + COLUMN_TIME  + ") VALUES ('Макогонов Евгений Валерьевич', '19:40');");
         db.execSQL("INSERT INTO "+ TABLE +" (" + COLUMN_NAME
-                + ", " + COLUMN_TIME  + ") VALUES ('Александр', '20:55');");
+                + ", " + COLUMN_TIME  + ") VALUES ('Шелехин Александр Андреевич', '20:55');");
         db.execSQL("INSERT INTO "+ TABLE +" (" + COLUMN_NAME
-                + ", " + COLUMN_TIME  + ") VALUES ('Николай', '19:00');");
+                + ", " + COLUMN_TIME  + ") VALUES ('Дрокин Николай Андреевич', '19:00');");
         db.execSQL("INSERT INTO "+ TABLE +" (" + COLUMN_NAME
-                + ", " + COLUMN_TIME  + ") VALUES ('Вячеслав', '17:40');");
+                + ", " + COLUMN_TIME  + ") VALUES ('Гончаров Вячеслав Владимирович', '17:40');");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) {
